@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context="com.codepath.apps.MySimpleTweets.ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rlUserHeader"
+        android:background="#ff8f9098">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivProfileBackgroundImage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="0dp"
+            android:contentDescription="user background image"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/ivProfileUserImage"
+            android:scaleType="centerCrop" />
+        
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:id="@+id/ivProfileUserImage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="20dp"
+            android:contentDescription="user image"
+            android:layout_marginBottom="0dp"
+            android:layout_alignParentBottom="false" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:id="@+id/tvProfileUserName"
+            android:layout_toRightOf="@+id/ivProfileUserImage"
+            android:layout_toEndOf="@+id/ivProfileUserImage"
+            android:layout_marginStart="59dp"
+            android:layout_marginLeft="59dp"
+            android:layout_margin="5dp"
+
+            android:layout_alignTop="@+id/ivProfileUserImage"
+            android:textStyle="bold"
+            android:textColor="#ffffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Tagline"
+            android:id="@+id/tvProfileUserTagline"
+            android:layout_alignParentBottom="false"
+            android:layout_toRightOf="@+id/ivProfileUserImage"
+            android:layout_toEndOf="@+id/ivProfileUserImage"
+
+            android:layout_marginTop="10dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/tvProfileUserName"
+            android:textColor="#ffffffff"
+            android:maxLines="4"
+            android:inputType="textMultiLine"
+            android:textStyle="italic"
+             />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlUserHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rlUserCountsHeader">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TWEETS"
+            android:id="@+id/tvTweetsCount"
+            android:layout_margin="10dp"
+            android:width="60dp"
+            android:maxLines="2"
+            android:minLines="2" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOLLOWERS"
+            android:id="@+id/tvFollowersCount"
+            android:layout_margin="10dp"
+            android:width="80dp"
+            android:maxLines="2"
+            android:minLines="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOLLOWING"
+            android:id="@+id/tvFollowingCount"
+            android:layout_margin="10dp"
+            android:width="80dp"
+            android:maxLines="2"
+            android:minLines="2" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rlUserCountsHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/flContainer">
+    </FrameLayout>
+</RelativeLayout>
